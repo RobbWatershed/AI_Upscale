@@ -20,5 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "AI Upscale"
-include(":lib")
- 
+include(":app")
