@@ -1,4 +1,4 @@
-package me.devsaki.hentoid.ai_upscale
+package me.robb.ai_upscale
 
 import android.content.res.AssetManager
 import java.nio.ByteBuffer

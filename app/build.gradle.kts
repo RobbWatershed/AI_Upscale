@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "me.devsaki.hentoid.ai_upscale"
+    namespace = "me.robb.ai_upscale"
     compileSdk = 34
 
     defaultConfig {
