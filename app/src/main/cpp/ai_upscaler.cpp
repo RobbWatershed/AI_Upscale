@@ -13,7 +13,7 @@ namespace {
 }  // namespace
 
 extern "C" JNIEXPORT jlong JNICALL
-Java_me_devsaki_hentoid_ai_1upscale_AiUpscaler_initEngine(
+Java_me_robb_ai_1upscale_AiUpscaler_initEngine(
         JNIEnv *env,
         jobject /* this */,
         jobject assetMgr,
@@ -28,16 +28,16 @@ Java_me_devsaki_hentoid_ai_1upscale_AiUpscaler_initEngine(
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_me_devsaki_hentoid_ai_1upscale_AiUpscaler_clear(JNIEnv * /* env */,
-                                                     jobject /* this */,
-                                                     jlong engine_handle) {
+Java_me_robb_ai_1upscale_AiUpscaler_clear(JNIEnv * /* env */,
+                                          jobject /* this */,
+                                          jlong engine_handle) {
     if (engine_handle == 0L) return;
     castToUpscaleEngine(engine_handle)->clear();
     delete castToUpscaleEngine(engine_handle);
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_me_devsaki_hentoid_ai_1upscale_AiUpscaler_upscale(
+Java_me_robb_ai_1upscale_AiUpscaler_upscale(
         JNIEnv *env,
         jobject /* this */,
         jlong engine_handle,
