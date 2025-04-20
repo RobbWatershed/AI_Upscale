@@ -1,5 +1,7 @@
 Android library to upscale a given picture by a 2x factor using the [Real-CUGAN](https://github.com/nihui/realcugan-ncnn-vulkan) AI model.
 
+Sources are adapted from [RealSR-NCNN-Android](https://github.com/tumuyan/RealSR-NCNN-Android) v1.8.3
+
 Used in the [Hentoid](https://github.com/avluis/Hentoid) app.
 
 # Setup
