@@ -1,15 +1,23 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.kotlin.android)
     id("com.android.library")
 }
 
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
+    }
+}
+
 android {
     namespace = "me.robb.ai_upscale"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 23
-        targetSdk = 34
+        lint.targetSdk = 36
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -44,9 +52,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
     }
 }
 

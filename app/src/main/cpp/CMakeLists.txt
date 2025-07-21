@@ -9,7 +9,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
 set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wl")
 
-
 set(ncnn_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../3rdparty/ncnn-android-vulkan-shared)
 add_library(ncnn SHARED IMPORTED)
 add_library(ai_upscale SHARED ai_upscaler.cpp upscale_engine.cpp realcugan.cpp)
@@ -48,6 +47,8 @@ set_target_properties(ncnn PROPERTIES IMPORTED_LOCATION
 find_library(liblog log)
 find_library(android-lib android)
 find_library(libjnigraphics jnigraphics)
+
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE "-Wl,-z,max-page-size=16384")
 
 target_link_libraries(ai_upscale
         webp
